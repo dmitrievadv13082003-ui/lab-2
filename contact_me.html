@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me — Дмитриева Дарья</title>
+</head>
+<body>
+    <h1>Contact me</h1>
+    <p><a href="index.html">На главную страницу</a></p>
+    <p>Форма обратной связи</p>
+
+    <!-- Учебная форма: GET открывает эту же страницу с параметрами.
+         Серверный обработчик не подключён; данные не сохраняются. -->
+    <form action="contact_me.html" method="get">
+        <p>
+            <!-- Явная связь: for у label совпадает с id у input. -->
+            <label for="surname">Фамилия:</label>
+            <input type="text" id="surname" name="surname" autocomplete="family-name" required>
+        </p>
+        <p>
+            <!-- Вложенный input также связан с label. -->
+            <label for="first-name">Имя:
+                <input type="text" id="first-name" name="first_name" autocomplete="given-name" required>
+            </label>
+        </p>
+        <p>
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+        </p>
+        <p>
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+        </p>
+        <p>
+            <input type="radio" id="consent" name="consent" value="yes" required>
+            <label for="consent">Согласна на обработку персональных данных</label>
+        </p>
+        <p><button type="submit">Отправить</button></p>
+    </form>
+    <p>Учебная форма: кнопка открывает эту же страницу с параметрами в адресной строке.
+        Сообщение не отправляется и не сохраняется. Для проверки используйте вымышленные данные.</p>
+</body>
+</html>
